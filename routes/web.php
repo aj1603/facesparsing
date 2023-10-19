@@ -21,15 +21,15 @@ use App\Http\Controllers\MakeupController;
 |
 */
 
-Route::get('/allproducts',[ProductController::class, 'allproducts'])->name('import-view');
-Route::post('/import',[ProductController::class, 'import'])->name('import');
-Route::get('/export',[ProductController::class, 'export'])->name('export');
+Route::get('/allproducts', [ProductController::class, 'allproducts'])->name('import-view');
+Route::post('/import', [ProductController::class, 'import'])->name('import');
+Route::get('/export', [ProductController::class, 'export'])->name('export');
 
 Route::get('/productall', [ProductController::class, 'productall']);
 Route::get('/privatedb', [PrivateController::class, 'privatedb']);
 Route::get('/hairmistdb', [HairMistController::class, 'hairmistdb']);
 
-Route::get('/allmoney', [MoneyController::class, 'allmoney']);
+Route::get('/price', [MoneyController::class]);
 Route::get('/create', [MoneyController::class, 'create']);
 Route::post('/store', [MoneyController::class, 'store']);
 
@@ -38,4 +38,3 @@ Route::get('/skincaredb', [SkincareController::class, 'skincaredb']);
 Route::get('/makeupdb', [MakeupController::class, 'makeupdb']);
 
 Route::get('/haircaredb', [HaircareController::class, 'haircaredb']);
-
