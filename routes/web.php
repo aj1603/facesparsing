@@ -25,7 +25,7 @@ Route::get('/allproducts', [ProductController::class, 'allproducts'])->name('imp
 Route::post('/import', [ProductController::class, 'import'])->name('import');
 Route::get('/export', [ProductController::class, 'export'])->name('export');
 
-Route::get('/productall', [ProductController::class, 'productall']);
+Route::get('/', [ProductController::class, 'productall']);
 Route::get('/privatedb', [PrivateController::class, 'privatedb']);
 Route::get('/hairmistdb', [HairMistController::class, 'hairmistdb']);
 
